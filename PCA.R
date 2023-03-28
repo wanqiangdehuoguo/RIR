@@ -12,7 +12,7 @@ library(vegan)
 library(FactoMineR)
 
 # 2.Data collation----
-phy <- read.csv("/home/data/sharedata/Physical_and_chemical_properties_were_sampled_four_times.csv") %>% 
+phy <- read.csv("sample_data/Physical_and_chemical_properties.csv") %>% 
   filter(mainVariable2 == "A") %>%
   mutate(group_name = c("vfd1","vfd2","vfd3","vfd4","vfd5","vfd6","vfd7","vfd8","vfd9","vfw1","vfw2","vfw3","vfw4","vfw5","vfw6","vfw7","vfw8","vfw9",
                         "spw1","spw2","spw3","spw4","spw5","spw6","spw7","spw8","spw9","spd1","spd2","spd3","spd4","spd5","spd6","spd7","spd8","spd9")) %>%
