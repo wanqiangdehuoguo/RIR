@@ -2,6 +2,13 @@
 #author:sangyimeng
 #data:2023-03-25
 
+# Analysis prepare using arg_ranker
+system("/PATH/arg_ranker -i /metagenome/read/or/contig/path/ -o /output/path/ -t Thread_num -kkdbtype 16s")
+system("/bin/bash /output/path/arg_ranking/script_output/arg_ranker.sh")
+# This step will used arg_ranker v2.0 from https://github.com/caozhichongchong/arg_ranker
+# arg_ranker will output arg_ranking/Sample_ranking_results.txt that we need.
+# Sample_ranking_results.txt is sample_data/samlpe_data1.csv
+
 # 1.Loading R packages----
 rm(list=ls())
 library(patchwork)
